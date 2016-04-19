@@ -1,0 +1,807 @@
+/* *************************************************  MOBILE ******************************************************************* */
+@media handheld, only screen and (device-width: 320px) {
+	/* -------------------------------- MOBILE JQUERY -------------------------------- */ 
+	.ui-loading .ui-loader {display: block; }
+	.ui-loader { display: none; position: absolute; opacity: .85; z-index: 100; left: 50%; width: 200px; margin-left: -130px; margin-top: -35px; padding: 10px 30px; }
+	/* -------------------------------- GERAL -------------------------------- */ 
+
+	body {font-size: 2.1em;	padding-top: 0!important;}
+	input, select, textarea, label, button{font-size: 2.1em;}
+	h1 {font-size: 2.6em; font-weight: normal; margin-top: 30px;}
+
+	.bloco_horizontal {background-color: rgba(0, 0, 0, 0); border-bottom: 2px dotted #CFCFCF; margin-bottom: 3.96%; padding-bottom: 2.96%;}
+	.bloco_horizontal .box_img{width: 42%;}
+	.bloco_horizontal .box_img span.categoria-flutuante {background-size: 100% 100%; height: 60px; right: 15px; top: 15px; width: 60px;}
+	.bloco_horizontal h1 {margin-top: 0; font-size: 1.6em !important;}
+	.bloco_horizontal p {display: none;}
+	
+	.bloco_3_itens{background-color: rgba(0, 0, 0, 0); border-bottom: 2px dotted #CFCFCF; height: auto; margin-bottom: 5%; margin-right: 0; padding-bottom: 3%; width: 100%;}
+	.bloco_3_itens p{padding: 0;}
+	.bloco_3_itens .foto_min{height: 100px; width: 100px;}
+	.bloco_3_itens span{padding-left: 0; padding-right: 0; font-size: 1.2em;}
+	.bloco_3_itens span.nota{font-size: 1.2em;}
+	.bloco_3_itens h1{font-size: 2em !important; margin-left: 0; margin-right: 0; margin-top: 0;}
+	.bloco_3_itens .midias .curtir {background: url("../img/lula/curtir_bt.png") no-repeat scroll 0 bottom / auto 100% rgba(0, 0, 0, 0); border: 1px solid #9D9BAE;	border-radius: 6px;	color: #000000;	font-size: 0.91em;	margin: 0 8px 0 0; padding-left: 7%; padding-top: 8px; text-transform: none;}
+	.bloco_3_itens .midias .curtir .curta{color: #000;}
+	.bloco_3_itens .midias .compartilhar {background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom / auto 88% rgba(0, 0, 0, 0); border: 1px solid #9D9BAE; border-radius: 5px; color: #000000; font-size: 1.1em; padding: 11px 25px 12px; text-transform: none;}
+	
+	.box_img span.categoria-flutuante{background-size: 100% 100%; height: 100px; width: 100px; right: 20px;	top: 20px;}
+	
+	#form_01{display: none;}
+	#form_02{display: block;}
+	
+	.bloco_form form label {display: inline-block; padding: 1.5% 0;}
+	
+	form#premio select{margin-left: 23px; padding: 7px 7px 8px; width: 239px; border: 1px solid #d9d9d9; margin-top: 0px;}
+	
+	.select_personalizado{float: right; width: 74% !important;}
+	.select_personalizado span{background-image: url("../img/select_tablet.png") !important; background-size: auto 100%; border-radius: 4px; padding: 2% 10% 2% 2% !important; width: 88% !important;}
+	.select_personalizado ul{border-radius: 4px;}
+	.select_personalizado ul li{padding: 2%;}
+	
+	.bt_mais_noticias{background-color: #423F59; background-image: url("../img/blog/fundo_mais.png"); background-position: 0 bottom; background-repeat: repeat-x; background-size: auto 100%; border-radius: 6px; font-size: 1.3em;	margin-top: 15px; width: 100%; padding: 1.8% 0;}
+	.desktop{display: none;}
+	.tablet{display: block;}
+
+	a.leia_post {background-image: url("../img/lula/fundo_bt.png"); background-repeat: repeat-x; background-position: 0 bottom; background-size: auto 100%; background-color: #FFFFFF; border: 1px solid #9D9BAE; border-radius: 4px; clear: both; color: #000000; display: inline-block; margin: 0; padding: 1.5% 4%; text-align: center; text-decoration: none;text-transform: none; width: auto; margin-bottom: 2.96%;}
+	
+	/* Bloco Init */	
+	.bloco_int{border-top: 2px dotted #CCCCCC;}
+	.bloco_int h2{border: 0 none;}
+
+	/* Categorias Flutuantes */
+	.box_img span.categoria-flutuante{opacity: 1;}
+	
+	/* Iniciativas */
+	.img_legenda{width: 100%;}
+
+	/* -------------------------------- TOPO -------------------------------- */
+	div.topo{background: none; background-color: #FFF; position: fixed; border-bottom: 2px solid #e0e1e9; top: 0; z-index: 1000;}
+	div.topo > header{padding: 0 3%; width: 94%; height: 75px; }
+	div.topo nav.redes_sociais{display: none;}
+	div.topo nav.idiomas{display: none;}
+	div.topo > header > h1{width: 40%;}
+	div.topo > header > aside{margin: 0; width: 100%;}
+	div.topo > header > aside div.form{background-color: #E0E1E9; border: 0 none; display: none; height: auto; left: 0; margin:0; padding:3%; position:absolute; top: 182%;	width: 95%;	z-index: 7;}
+	div.topo > header > aside div.form form{background: none repeat scroll 0 0 #FFFFFF;	border: 1px solid #D8D8D8; height: auto; overflow: hidden;}
+	div.topo > header > aside form button{height: 43%; margin-right: 38px; margin-top: 38px; overflow: hidden; width: 5.6%;}
+	div.topo > header > aside form input{font-size: 1.1em !important; height: auto;	padding: 1% 2%;	width: 95%;}
+	div.topo > header > nav.principal{position: absolute; right: 0; top: 240px; display: none;}
+	div.topo > header > nav.principal menu{	max-width: 100%; width: 100%; }
+	div.topo > header > nav.principal menu > li{width: 100%; border-left: 0 none; text-align: left;	border-bottom: 1px solid #FFFFFF !important;}
+	div.topo > header > nav.principal menu > li ul li#america_latina {display: block;}
+	div.topo > header > nav.principal menu > li ul li#africa{display: block;}
+	div.topo > header > nav.principal menu > li > a{border-bottom: 1px solid #FFFFFF !important; border-left: 10px solid; height: auto;	font-size: 1.3em; padding: 2%;}
+	div.topo > header > nav.principal menu > li:first-child > a{border-top: 1px solid #FFF!important;}
+	div.topo > header > nav.principal menu > li.ativo > a, 
+	div.topo > header > nav.principal menu > li:hover > a{height: auto;	padding: 2%; border-top: 0;}
+	div.topo > header > nav.principal menu > li > a.linha_dupla{height: auto; padding: 2%;}
+	div.topo > header > nav.principal menu > li nav{display: block;}
+	div.topo > header > nav.principal menu > li ul li a{font-size: 1.1em; padding: 2%;}
+	div.topo > header #campo_mobile {cursor: pointer; display: block; height: auto;	margin-right: 0; position: absolute; right: 0; top: 0; width: 15%;}
+	div.topo > header #campo_mobile img{height: auto; margin-top: 15%; width: 100%;}
+	div.topo > header #campo_mobile.ativo {background-color: #E0E1E9;}
+	div.topo.retratil{height: auto; position: relative; background: none repeat scroll 0 0 rgba(0, 0, 0, 0);}
+	div.topo.retratil > header{	max-width: 480px;}
+	div.topo > header > nav.principal menu > li{width: 100%!important;}
+	div.topo > header > nav.principal menu > li > a > span.linha {display: inline-block;}
+
+
+	/* -------------------------------- RODAPÉ -------------------------------- */
+	div.base > footer{padding: 0 3%; width: 94%;}
+	div.base > footer > section > article{display: none;}
+	div.base > footer > section > article:first-child{display: block; padding: 10% 0; width: 100%;}
+	div.base > footer > aside .newsletter{display: none;}
+	div.base > footer > section{width: 50%;}
+	div.base > footer > aside{width: 50%;}
+	div.base > footer > section span.tel{margin: 0;}
+	div.base > footer > aside ul{padding-bottom: 12%; padding-left: 15%; padding-top: 19%;}
+	div.base.copyright > small{width: 100%; text-align: center; padding: 2% 1%;}
+	div.base .idiomas{background-color: #1C1A2B; color: #FFFFFF; display: block; font-size: 1.2em; margin: 0 auto; padding: 2% 3%; text-align: center; width: 94%;}
+	div.base .idiomas a{color: #fff; text-decoration: none;}
+	div.base .idiomas span{margin: 0 10px;}
+	div.base > footer > section > article:nth-of-type(1) a{color: #9C9AAE; text-decoration: none;}
+	div.base > footer > section ul li a, div.base > footer > section span {font-size: 1.2em;}
+
+	/* -------------------------------- MEIO -------------------------------- */
+	div.meio{clear: both; width: 94%; padding: 160px 3% 0; margin-top: 0px;	border-top: 4px solid #E1E2E9;}
+	div.meio_sidebar{clear: both; width: 94%; padding: 160px 3% 0; margin-top: 0px;	border-top: 4px solid #E1E2E9;}
+	div.meio h1{font-size: 2.3em; height: auto;}
+	div.meio_sidebar h1{font-size: 2.3em;}
+
+	/* -------------------------------- SWIPE --------------------------------- */
+	.swipe_container{position: relative;}
+	.swipe_element{position: absolute; left: 1000px;}
+	.swipe_element:first-of-type{left: 0px;}
+	ul.swipe_bullet{display: table; height: 100px; width: auto;	margin: 0 auto;	padding: 0;	bottom: 0;}
+	.index section.chamada ul.swipe_bullet{margin: 2290px auto 0;}
+	.index section.chamada.especial ul.swipe_bullet{margin: 1500px auto 0;}
+	.galeria_multimidia ul.swipe_bullet{margin: 590px auto 0;}
+	#noticias_relacionadas ul.swipe_bullet{margin: 870px auto 0;}
+	
+	ul.swipe_bullet li{display: block; float: left; background-color: #FFF;	height: 50px; border-radius: 25px; border: 1px solid #b3b3b3; width: 50px; margin: 10px 20px; padding: 0; list-style: none;}
+	ul.swipe_bullet li.ativo{background-color: #292738;	border: 1px solid #292738;}
+	
+	/* -------------------------------- GALERIA -------------------------------- */
+	.galeria_multimidia {background-color: transparent; overflow: hidden; color: #292738; height: 860px; }
+	.galeria_multimidia .mais{display: none; }
+	.galeria_multimidia ol{	clear: both;}
+	.galeria_multimidia ol li{clear: none;}
+	.galeria_multimidia .swipe_element:first-of-type{left: 10%;}
+	.tn3.album, .tn3.album li {float: none;	width: 88%;	}
+	.tn3.album, .tn3.album li img{float: none; width: 100%}
+	.tn3.album li{background-color: #000000; left: 80%; width: 70%;	top: 18%;} 
+	.tn3.album li img{opacity: 0.5;}
+	.tn3.album li.roll{background-color: #FFF; left: 8%; width: 84%; top: 14%; z-index: 111; } 
+	.tn3.album li.roll + li {z-index: 100;} 
+	.tn3.album li.roll img{opacity:1;}
+	
+	/* -------------------------------- CANAIS -------------------------------- */
+
+	/* -------------------------------- Perfil -------------------------------- */
+
+	.o-instituto-perfil .bloco_principal{width: 100%;}
+	.o-instituto-perfil .bloco_principal h2{font-size: 1.4em;}
+	.o-instituto-perfil .imagem_legenda{width: 100%; background-color: transparent;}
+	.o-instituto-perfil .imagem_legenda span{padding: 10px 0; color: #929295;}
+	.o-instituto-perfil .bloco_conteudo{margin-top: 0; width: 100%;}
+
+	/* -------------------------------- Prêmios -------------------------------- */
+	.lula-premios .bloco_3_itens .midias .int{display: none;}
+
+	/* -------------------------------- Notícias -------------------------------- */
+	.o-instituto-noticias h2{font-size: 18px; font-weight: normal; margin: 0 0 40px;}
+	.o-instituto-noticias .meio article.principal{display: none;}
+	.o-instituto-noticias .meio article.principal img{height: auto; margin: 0; width: 100%;}
+	.o-instituto-noticias .meio article.principal p{display: none;}
+	.o-instituto-noticias .bloco_3_itens{height: auto;}
+	.o-instituto-noticias .bloco_3_itens a > span{padding-left: 0; padding-right: 0;}
+
+	/* -------------------------------- Sobre -------------------------------- */
+	.o-instituto-sobre .bloco_3_itens span{padding-bottom: 0; margin-top: -5px;}
+	.o-instituto-sobre .bloco_faca_parte{background: url("../img/blog/fundo_mais.png") repeat-x scroll 0 bottom #423F59 !important;	border-radius: 4px;	clear: both; margin: 0 5% 50px;	width: 90%;}
+	.o-instituto-sobre .bloco_faca_parte h1{font-size: 1.4em; padding: 0;}
+
+	/* -------------------------------- História -------------------------------- */
+	.o-instituto-historia div.meio_sidebar .lateral{display: none;}
+	.o-instituto-historia div.meio_sidebar article{width: 100%;	}
+
+	/* -------------------------------- Relatórios -------------------------------- */
+	.o-instituto-relatorios .bloco_int{border: 0 none;}
+
+	/* -------------------------------- Blog -------------------------------- */
+	.lula-blog .meio article a.leia_post {background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom #FFFFFF;	border: 1px solid #9D9BAE; border-radius: 4px; clear: both; color: #000000; display: block; margin: 10px 0 0; padding: 8px 16px; text-align: center; text-transform: none; width: 70px;}
+	.lula-blog .meio article .midias{display: none;}
+	.lula-blog .meio article h1{margin-bottom: 0;}
+	.lula-blog .meio article hr{display: none;}
+	.lula-blog .meio article{border-bottom: 2px dotted #CCCCCC; margin-bottom: 2.96%;}
+	.lula-blog .meio article > img{height: auto; margin: 0 0 15px; width: 100%;}
+	.lula-blog .meio article.principal{background-color: rgba(0, 0, 0, 0); border-bottom: 2px dotted #CCCCCC; padding: 0;}
+
+	/* -------------------------------- Contato -------------------------------- */
+	.o-instituto-contato .bloco_lateral,
+	.o-instituto-contato .bloco_form{width: 100%; clear: both; position: relative;}
+	.o-instituto-contato .meio h3{ font-weight: normal;	font-size: 1em;	font-family: "Myriad Pro";}
+	.o-instituto-contato div.meio .redes_sociais a{height: 100px; margin-bottom: 5%; margin-right: 3%; margin-top: 3%; width: 100px;}
+	.o-instituto-contato .bloco_lateral hr{border-style: dotted;}
+	.o-instituto-contato .bloco_form form{background-color: transparent; padding: 0;}
+	.o-instituto-contato .bloco_form form label{display: none;}
+	.o-instituto-contato .bloco_form form input{border-radius: 4px; clear: both; height: auto; margin-bottom: 2.96%; padding: 2%; width: 96%;}
+	.o-instituto-contato .bloco_form form textarea {border-radius: 4px; padding: 2%; width: 96%; margin-bottom: 2.96%;}
+	.o-instituto-contato .bloco_form form .captcha {margin-left: 0;}
+	.o-instituto-contato .bloco_form form button{background-color: #423F59;	background-image: url("../img/blog/fundo_mais.png"); background-position: 0 bottom;	background-repeat: repeat-x; background-size: auto 100%; border-radius: 4px; color: #FFFFFF; margin-left: 0; margin-top: 15px; padding-left: 0; padding-right: 0; width: 100%;}
+	.o-instituto-contato .bloco_form form > p, 
+	.o-instituto-contato .bloco_form form > h2{padding-left: 0;}
+	.o-instituto-contato .bloco_form form .select_personalizado{margin-bottom: 2.96%; width: 100% !important;}
+	.o-instituto-contato .bloco_form form .select_personalizado span{background-image: url("../img/select_tablet.png");	padding: 2% 10% 2% 2% !important; width: 88%;}
+	.o-instituto-contato .bloco_form form .captcha{display: none;}
+	.o-instituto-contato .bloco_lateral{margin-top: 0;}
+	.o-instituto-contato .bloco_lateral .endereco{background-size: 4.5% auto; padding-left: 6%;}
+	.o-instituto-contato .bloco_lateral .telefone{background-size: 4.5% auto; padding-left: 6%; background-position: 0 -170px;}
+		
+	/* -------------------------------- Vida Lula -------------------------------- */
+	.lula-vida #form_02 {float: none;}
+	.lula-vida #form_02 .select_personalizado {width: 50% !important; z-index: 10;}
+	.lula-vida form#premio select{float: right;	width: 50%;}
+	.lula-vida .bloco .leia_post{display: inline-block;}
+	.lula-blog .meio article a.leia_post{width: 12%; display: block;}
+
+	/* -------------------------------- Notas -------------------------------- */
+	.o-instituto-notas .miolo {width: 100%;}
+	.o-instituto-notas .lateral {width: 100%;}
+	.o-instituto-notas .meio article.principal h1 {font-family: "Myriad Pro"; margin-bottom: 5px; font-size: 2.3em;}
+	.o-instituto-notas .meio article.principal span{font-size: 1.2em;}
+	.o-instituto-notas .meio article.principal {border-bottom: 1px dotted #CFCFCF; margin-bottom: 3.96%; margin-top: 10px; padding-bottom: 3.96%; width: 100%;}
+	.o-instituto-notas .bloco_3_itens{width: 100%; height: auto;}
+	.o-instituto-notas .bt_mais_noticias{padding: 10px 0; width: 100%; margin-bottom: 3.96%;}
+	.o-instituto-notas .lateral .imprensa menu{margin-top: 0; font-size: 1.3em;}
+	.o-instituto-notas .lateral .imprensa menu li img{height: auto; margin-right: 5%; width: 25%;}
+	.o-instituto-notas .lateral .imprensa menu li > a{border-left-width: 15px!important;}
+	.o-instituto-notas .lateral .imprensa menu li.materiais > a{padding-left: 100px; background-size: auto 68%;}
+	.o-instituto-notas .lateral .imprensa menu li.mais > a,
+	.o-instituto-notas .lateral .imprensa menu li.menos > a{background-size: auto 50%;}
+	.o-instituto-notas .lateral .imprensa menu li a span.tamanhos{margin-bottom: 2.96%;}
+	.o-instituto-notas .lateral .imprensa menu li p{margin: 2.96% 4%;}
+	.o-instituto-notas .lateral .imprensa menu li a.mais_fotos{padding-right: 50px;	background-size: auto 50%;}
+
+	/* -------------------------------- Perguntas -------------------------------- */
+	.o-instituto-perguntas .bloco-linhas,
+	.o-instituto-perguntas .bloco-linhas:last-child{border-bottom: 2px dotted #CCCCCC;}
+	.o-instituto-perguntas .bloco_form h2 a{color: #000;}
+	
+	/* -------------------------------- Contribua -------------------------------- */
+	.o-instituto-contribua .contribua > div{background-position: 15px 20px;	background-size: 20% auto; height: auto; margin-bottom: 30px; margin-right: 0; padding: 0; width: auto;}
+	.o-instituto-contribua .contribua > div h3,
+	.o-instituto-contribua .contribua > div p{text-align: left; padding-left: 24%;}
+	.o-instituto-contribua .contribua > div > h3{font-size: 1.3em; margin-bottom: 5px;}
+	.o-instituto-contribua .contribua ul.redes_s{margin-bottom: 10px;}
+	.o-instituto-contribua .modal > p{font-size: 1em;}
+	.o-instituto-contribua .box_modal{background: none repeat scroll 0 0 rgba(0, 0, 0, 0); position: relative; width: auto; padding: 0 3%; z-index: 1;}
+	.o-instituto-contribua .box_modal .formularios{background-color: rgba(0, 0, 0, 0); border: 0 none; border-radius: 0; box-shadow: 0 0 0 rgba(0, 0, 0, 0); max-width: 100%; padding: 0; width: 100%;}
+	.o-instituto-contribua .box_modal #fechar,
+	.o-instituto-contribua .box_modal .rolagem > .titulo,
+	.o-instituto-contribua .box_modal .rolagem > p,
+	.o-instituto-contribua .box_modal form label,
+	.o-instituto-contribua .box_modal form .termos_privacidade > a.imprimir{display: none;}
+	.o-instituto-contribua .box_modal form input[type="text"],
+	.o-instituto-contribua .box_modal form textarea{font-size: 1.1em; height: auto; padding: 1% 2%; width: 95%;	height: auto; margin-bottom: 2.96%;}
+	.o-instituto-contribua .box_modal form .bloco_3_campos input[type="text"]{width: 60%;}
+	.o-instituto-contribua .box_modal form p{font-weight: bold; padding-left: 0;}
+	.o-instituto-contribua .box_modal form .bloco_3_campos{width: 100%;}
+	.o-instituto-contribua .box_modal form .termos_privacidade > div{margin-right: 0;}
+	.o-instituto-contribua .box_modal form select{width: 99%;}
+	.o-instituto-contribua .box_modal form button{background: url("../img/blog/fundo_mais.png") repeat-x scroll 0 bottom #423F59; border-radius: 4px; margin-top: 15px; padding: 8px 0; width: 99%;	margin-bottom: 3%;}
+	.o-instituto-contribua .captcha img{width: 50%;	height: auto;}
+	.o-instituto-contribua .box_modal form{background-color: transparent;}
+	.o-instituto-contribua .bloco_form .radio_personalizado.ativo,
+	.o-instituto-contribua .bloco_form .checkbox_personalizado.ativo {background-image: url("../img/checkbox_mobile_ativo.png");}
+	.o-instituto-contribua .bloco_form .radio_personalizado,
+	.o-instituto-contribua .bloco_form .checkbox_personalizado {background-image: url("../img/checkbox_mobile.png");}
+	.o-instituto-contribua .box_modal form .radio_personalizado input,
+	.o-instituto-contribua .box_modal form .checkbox_personalizado input{margin-left: 4%; margin-right: 5%; opacity: 0;	padding: 2px; float: left;}
+	.o-instituto-contribua .box_modal form .radio_personalizado,
+	.o-instituto-contribua .box_modal form .checkbox_personalizado{background-size: auto 100%;}
+	.o-instituto-contribua .box_modal div.select .select_personalizado{margin-bottom: 2.96%; width: 99%;}
+	.o-instituto-contribua input.imagem_personalizar {background-size: 100% auto; margin-bottom: 2.96%;	margin-left: 0;	margin-top: 0; padding: 200px 220px 0 0;}
+	.o-instituto-contribua .box_modal form .termos_privacidade > a{width:50px; height: 50px; margin-right: 2%;}
+	.o-instituto-contribua .box_modal form .termos_privacidade > a.salvar{background: url("../img/contribua/salvar_enviar.png") no-repeat scroll -2px -3px rgba(0, 0, 0, 0); background-size: auto 100%;}
+	.o-instituto-contribua .box_modal form .termos_privacidade > a.enviar{background: url("../img/contribua/salvar_enviar.png") no-repeat scroll -105px -2px rgba(0, 0, 0, 0); background-size: auto 100%;}
+	.o-instituto-contribua .box_modal form .termos_privacidade > div, 
+	.o-instituto-contribua .box_modal form .termos_privacidade iframe{height: 300px;}
+	.o-instituto-contribua div#o-que{background-size: auto 80%; width: 100%;}
+	.o-instituto-contribua div#o-que input#outros{height: 42px; margin: 0; padding: 0; width: 100%;}
+	.o-instituto-contribua div#o-que .ui-input-text{display: inline-block; margin-left: 2.96%;}
+	
+	/* -------------------------------- Lula -------------------------------- */
+	.lula-vida span#topo{display: none;}
+	.lula-vida div.bloco_principal h2 {font-weight: normal;}
+	.lula-vida .linha_do_tempo{left: 5.5%; top: 1.6%; width: 0.8%;}
+	.lula-vida .ponto.inicio{display: none;}
+	.lula-vida .apontador,
+	.lula-vida .apontador_esquerda{background-image: url("../img/lula/seta_v_esquerda_mobile.png"); background-repeat: no-repeat; background-position: left center; background-size: 100% auto;	background-color: rgba(0, 0, 0, 0);	clear: both; margin: 0 0 2.96%;	padding: 0 0 0 11.9%; width: 88.1%;	float: none;}
+	.lula-vida .apontador a{padding: 2.5% 3%; text-align: left; text-transform: none;}
+	.lula-vida .apontador.veja_mais a {text-align: center; width: 20%;}
+	.lula-vida .bloco,
+	.lula-vida .bloco_esquerda,
+	.lula-vida .bloco_direita{clear: both; float: none; margin: 0 0 2.96% 11.9%; padding: 1% 2.15%; width: 83.8%;}
+	.lula-vida .bloco_esquerda .seta,
+	.lula-vida .bloco_direita .seta{background-image: url("../img/lula/seta_c_esquerda_mobile.png"); background-repeat: no-repeat; background-position: left center; background-size: 100% auto; background-color: rgba(0, 0, 0, 0); height: 31%; left: -8.7%; right: auto; width: 8.7%;}
+	.lula-vida .bloco .numero,
+	.lula-vida .bloco .data{display: none;}
+	.lula-vida .bloco .ler_post{display: block;}
+	.lula-vida .ano{background-color: #F3F4F8; border: 8px solid #C3CDE0; border-radius: 100px; display: inline-block; height: 70px; padding-top: 30px;	text-align: center;	width: 100px; font-size: 0.8em;}
+	.lula-vida .bloco .mes{border-top: 1px solid #9D9BAE; display: block; margin-bottom: 2.9%; margin-top: 1%; text-align: right;}
+	
+	/* -------------------------------- América Latina e África -------------------------------- */
+	.projeto-america-latina .destaque > div, 
+	.projeto-africa .destaque > div{padding-left: 30px;}
+	.projeto-america-latina-iniciativa .destaque p, 
+	.projeto-africa-iniciativa .destaque p{font-size: 1.5em; width: 70%; padding-right: 55px;}
+	.projeto-america-latina .bloco_3_itens, 
+	.projeto-africa .bloco_3_itens{height: auto;}
+	
+	/* Destaques */
+	.destaque{margin-top: 160px; height: 330px;}
+	.destaque + div.meio{padding-top: 0; border-top: 0;}
+	.destaque img#chamada{height: 330px;}
+	.destaque p{font-size: 1.5em;}
+	.destaque a{font-size: 1em;}
+	
+	/* Banner */
+	div.meio section.chamadas ul{height: auto; padding-top: 559px; background-color: rgba(0, 0, 0, 0);}
+	div.meio section.chamadas ul li{margin: 0; width: 100%; background-color: rgba(0, 0, 0, 0);	height: auto; border-bottom: 2px dotted #CFCFCF;}
+	div.meio section.chamadas ul li article.principal{width: 100%;}
+	div.meio section.chamadas ul li .exibicao{height: 559px; width: 100%; overflow: hidden;}
+	div.meio section.chamadas ul li:hover a.thumb .barra_progresso{height: 0;}
+	div.meio section.chamadas ul li:hover a.thumb .barra_progresso, 
+	div.meio section.chamadas ul li.ativa a.thumb .barra_progresso{height: 15px; left: 0; margin: 0; position: absolute; top: 494px; width: 100%; z-index: 1;}
+	div.meio section.chamadas ul li a.thumb{display: block; width: auto; padding: 0; height: auto; background-color: rgba(0, 0, 0, 0); position: static;}
+	div.meio section.chamadas ul li:hover a.thumb, 
+	div.meio section.chamadas ul li.ativa a.thumb{background-color: rgba(0, 0, 0, 0); color: #000000; font-weight: bold;}
+	div.meio section.chamadas ul li p.descricao{color: #000000; font-size: 1.8em; height: 152px; margin: 88px 0 2%; overflow: hidden;}
+	div.meio section.chamadas ul li p{color: #666666; font-size: 1.2em;	height: 235px;	margin-top: -235px;}
+	div.meio section.chamadas ul li article.principal img{float: left;}
+	div.meio section.chamadas ul{margin-bottom: 2.96%; width: 98%;}
+	
+	/* -------------------------------- Internas -------------------------------- */	
+	div.interna section{padding: 160px 3% 0; width: 94%;}
+	div.interna section > h1{font-size: 2.4em; font-weight: normal;}
+	div.interna p img{height: auto; width: 100%;}
+	div.interna section .blocos{display: none;}
+	div.interna section .blocos a:first-child{margin-left: 10px;}
+	div.interna section .blocos a{margin-bottom: 10px;}
+	div.interna .lateral {float: none; padding: 0 3%; width: 94%;}
+	div.interna .lateral.bottom{bottom: auto; position: relative;}
+	div.lateral aside h1{font-family: "Myriad Pro";}
+	div.lateral aside menu{padding: 40px 0 0;}
+	div.lateral aside.menu2 menu li > a > img{height: auto; margin-right: 25px;	margin-top: -25px; width: 25%;}
+	div.lateral aside.menu2 menu li > a{border-left-width: 15px!important; border-left-color: #55D060!important; padding: 25px 25px 0 0;}
+	div.lateral aside.menu2 menu li:nth-of-type(2) > a{border-left-color: #F2C13F!important;}
+	div.lateral aside.menu2 menu li:nth-of-type(3) > a{border-left-color: #35B5EB!important;}
+	div.lateral aside.menu2 menu li:nth-of-type(4){display: none;}
+	div.lateral aside.menu2 menu li:first-child > a, 
+	div.lateral aside.menu2.noticias menu li:first-child > a:hover{}
+	div.lateral aside.menu2 menu li{font-size: 1.2em;}
+	div.lateral aside.menu2 menu li:hover{margin-left: 0;}
+	div.lateral aside.menu2.relacioandas menu li:nth-child(n+3){display: none;}
+	div.lateral aside.menu2.relacioandas menu li{background-color: #F6F5F5;	padding-bottom: 0; border-bottom: none;	margin-bottom: 20px;}
+	div.lateral aside.menu2.relacioandas menu li > span{font-weight: bold; margin: 0; padding: 16px 10px;}
+	div.lateral aside.menu2.noticias menu li > a{margin-left: 0; border: auto;}
+	
+	/* Midias_fixas */
+	.informacoes_adicionais{clear: both; color: #999999; overflow: hidden;}
+	.midias_fixas{list-style: none;	padding: 0;	margin: 0;}
+	.midias_fixas li{background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom #FFFFFF; border: 1px solid #9D9BAE; border-radius: 5px; color: #000000; float: left; margin-right: 5px; padding: 5px 15px 8px 10px; text-transform: none;}
+	.midias_fixas li a{color: #FFFFFF; display: inline-block; float: left; height: 60px; text-decoration: none; text-indent: -9999px; text-transform: uppercase; width: 120px; background-image: url("../img/internas/lateral_fixa_preto.png"); background-repeat: no-repeat; background-color: rgba(0, 0, 0, 0); background-size: 80% auto;}
+	.midias_fixas li.compartilhar a{background-position: 17px -13px;}
+	.midias_fixas li.facebook a{background-position: 16px -138px;}
+	.midias_fixas li.email a{background-position: 17px -263px;}
+	.midias_fixas li.twitter a{background-position: 17px -388px;}
+	.midias_fixas li.imprima a{background-position: 17px -507px;}
+	.midias_fixas li.pdf a{background-position: 17px -628px;}
+	.midias_fixas li.comente a{background-position: 17px -752px;}
+	.midias_fixas li {overflow: hidden; position: relative;}
+	.midias_fixas .facebook .fb_iframe_widget{left: 37px; position: absolute; top: 4px;	opacity: 0;}
+	.midias_fixas .compartilhar .fb_iframe_widget{left: 17px; position: absolute; top: 4px;	opacity: 0;}
+	.midias_fixas li.twitter .twitter-share-button{left: 39px; position: absolute; top: 27px; opacity: 0;}
+
+
+	/* ***************************  MEIO  *************************** */
+	.index section.chamada article.destaque{background-color: rgba(0, 0, 0, 0); border-bottom: 1px dotted #CFCFCF; color: #000000; margin-bottom: 30px;	margin-right: 0; margin-top: 20px; width: 100%;	padding-bottom: 10px; height: auto; min-height: 735px;}
+	.index section.chamada article.destaque a{color: #000;}
+	.index section.chamada article.destaque h1{margin-left: 0; margin-right: 0; font-size: 1.5em;}
+	.index section.chamada article.destaque p{display: none;}
+	.index section.chamada article.noticia{background-color: rgba(0, 0, 0, 0); border-bottom: 1px dotted #CFCFCF; padding-bottom: 30px; width: 100%; margin-bottom: 30px;}
+	.index section.chamada article.noticia span{margin: 0;}
+	.index section.chamada article.noticia h1{margin-left: 0; margin-right: 0; font-size: 1.15em;}
+	.index section.chamada article.noticia img{display: block; width: 40%; float: left; margin-right: 10px;}
+	.index section.chamada.especial article.noticia:nth-of-type(2), 
+	.index section.chamada.especial article.noticia:nth-of-type(3), 
+	.index section.chamada.especial article.noticia:nth-of-type(4){display: none;}
+
+	.index section.chamada article.noticia.swipe_element{bottom: 100px;}
+	.index section.chamada article.noticia.swipe_element .box_img, 
+	.index section.chamada article.noticia.swipe_element img{display: block; float: none; clear: both; width: 100%;	}
+
+
+	.index section.chamada article.noticia h1 {height: 228px; line-height: 1.23em;}
+	.index section.chamada article.noticia span {display: none;}
+	.index section.chamada article.noticia:nth-of-type(4) div.box_img{display: none;}
+	.index section.chamada article.noticia:nth-of-type(4) h1{height: auto;}
+
+	.index section.noticia_relacionada{display: block; height: 1000px; float: none; clear: both; position: relative; width: 100%;}
+	.index section.chamada{position: relative; height: 2390px;}
+	.index section.chamada.especial{position: relative; height: 1620px;}
+	.index section.noticia_relacionada article,
+	.index section.chamada article.noticia.swipe_element,
+	.index section.chamada.especial article.noticia:nth-of-type(6),
+	.index section.chamada.especial article.noticia:nth-of-type(7),
+	.index section.chamada.especial article.noticia:nth-of-type(8) {border-top-width: 10px; display: block; float: none; clear: both; position: absolute; width: 100%; padding: 0; left: 1000px;}
+	.index section.noticia_relacionada article:first-of-type,
+	.index section.chamada article.noticia.swipe_element:first-of-type,
+	.index section.chamada.especial article.noticia:nth-of-type(5),
+	.index section.chamada article.noticia:nth-of-type(5){left: 0;}
+	.index section.noticia_relacionada article a,
+	.index section.chamada article.noticia.swipe_element a{display: block; float: none;	clear: both; margin: 0 auto; width: 896px; padding: 0;}
+	.index section.chamada article.noticia.swipe_element h1 {height: 137px; line-height: 1.23em; overflow: hidden;}
+	.index section.noticia_relacionada p,
+	.index section.noticia_relacionada h1{font-size: 1.5em;	}
+	.index section.noticia_relacionada p{height:  185px; margin-bottom: 0; overflow: hidden;}
+	.index section.noticia_relacionada article img {height: 504px; width: 896px;}
+	.index section.noticia_relacionada span{display: none;}
+
+	/*  BANNER MEDIO HORIZONTAL  */
+	#br_banner ul {height: 930px;}
+	#br_banner ul li {height: 126px; margin: 770px 0 0; width: 155px;}
+	#br_banner ul li .exibicao{height: 740px;}
+	#br_banner ul li article.principal {height: 740px;}
+	#br_banner ul li a.thumb {height: 126px; width: 157.5px;}
+	#br_banner ul li img {height: 116px; margin: 10px 0 0; width: 155px;}
+	#br_banner #banner_anterior,
+	#br_banner #banner_proximo{height: 140px;}
+	/*  BANNER MEDIO HORIZONTAL  */
+}
+/* *************************************************  MOBILE FIM  ******************************************************************* */
+
+
+/* *************************************************  TABLET  ******************************************************************* */
+@media screen and (min-device-width: 481px) and (max-device-width: 1024px) {
+	body{font-size:1em;}
+	/* ***************************  ELEMENTOS PRINCIPAIS - TOPO  *************************** */
+	div.topo {background-position: right -3px;}
+	div.topo > header {height: auto; margin: 0 auto; max-width: 940px; position: relative;}
+	div.topo.retratil > header {max-width: 940px;}	
+	div.topo nav.idiomas{width: 5.6%;}
+	div.topo > header > nav.principal menu{max-width: 940px;}
+	div.topo > header > nav.principal menu > li{width: 16.57%; overflow: visible;}
+	div.topo > header > nav.principal menu > li:first-child nav{width: 120%;}
+	div.topo > header > nav.principal menu > li ul li{background-color: #fff;}
+	div.topo.retratil > header > nav.principal menu > li{width: 16.55%;}
+	
+
+	/* ***************************  ELEMENTOS PRINCIPAIS - MEIO  *************************** */
+	div.meio{max-width: 940px;}
+	div.meio_sidebar {max-width: 940px;}
+	.destaque > div {margin: 0 auto; max-width: 940px;}
+	div.meio_sidebar {max-width: 940px;}
+
+	/* ***************************  ELEMENTOS PRINCIPAIS - RODAPÉ  *************************** */
+	div.base > footer {max-width: 940px; min-height: 424px;	position: relative;}
+	div.base.copyright > small{max-width: 940px;}
+	div.base > footer > section{width: 100%;}
+	div.base > footer > section > article:nth-of-type(1),
+	div.base > footer > section > article:nth-of-type(2),
+	div.base > footer > section > article:nth-of-type(3),
+	div.base > footer > section > article:nth-of-type(4){padding: 0 0 0 8%; width: 24.3%;}
+	div.base > footer > section span.tel{margin-top: 0; margin-bottom: 14%;}
+	div.base > footer > section > article:nth-of-type(1){left: 0; top: 60%; position: absolute;	background-color: #1C1A2B;}
+	div.base > footer > section > article:nth-of-type(1) a{color: #9C9AAE; text-decoration: none;}
+	div.base > footer > aside .newsletter h4{margin: 16px 0 13px; font-size: 1.06em;}
+	div.base > footer > .redes_sociais .newsletter{left:31.5%; margin:0; padding:0 9% 4%; position:absolute; top:60%; width:200px;}
+	div.base > footer > aside ul li{margin-bottom: 5%; margin-right: 2%;}
+	div.base > footer > aside ul li, div.base > footer > aside ul li a{height: 45px; width: 45px;}
+	div.base > footer > aside ul{left: 66%; margin: 0; padding: 3% 9% 6%; position: absolute; top: 60%; width: 200px;}
+	div.base > footer > section ul li{margin: 0 0 1%;}
+	div.base.copyright {background-color: #252335; margin-top: -1px;}
+	
+	/* ***************************  ELEMENTOS PRINCIPAIS - GERAL  *************************** */
+	h1 {font-weight: normal;}
+	
+	/* Layouts legendas */
+	.desktop{display: none;}
+	.tablet{display: block;}
+	
+	/* Banner 1 */
+	.tn3-gallery img{width: 100%;}
+	.tn3-gallery {height: 595px!important;}
+	.tn3-gallery .tn3-image {height: 570px!important;}
+	.tn3-gallery .tn3-thumbs {width: 900px!important;}
+	.galeria_multimidia h1{text-transform: uppercase; font-size: 1.3em; margin: 2% 3%;}
+	.galeria_multimidia .mais{margin: 2.4% 3% 2% 3%;}
+	
+	/* Blocos flutuantes */
+	.bloco_3_itens {background-color: rgba(0, 0, 0, 0); border-bottom: 1px dotted #CFCFCF; float: left;	margin-bottom: 2.7%; margin-right: 1%; width: 32.66%; height: 275px;}
+	.bloco_3_itens h1{margin: 1.8% 2.4%;}
+	.bloco_3_itens a > span {padding: 1.8% 2.4% 1%;}
+	.bloco_3_itens p{padding: 0 2.4%;}
+	
+	/* Blocos linha */
+	.bloco_horizontal{background-color: #FFFFFF; border-bottom: 1px dotted #CCCCCC; padding-bottom: 2.96%;}
+	.bloco_horizontal .box_img{width: 32.66%;}
+	
+	/* Categorias Flutuantes */
+	.box_img span.categoria-flutuante {opacity: 1;}
+	
+	/* Formularios */
+	.bloco_form form input {margin-left: 1.5%;}
+	.bloco_form form label.mostrar{text-transform: none; font-weight: bold;	font-size: 1.04em;}
+	
+	/* Botões */
+	.bt_mais_noticias {background: url("../img/blog/fundo_mais.png") repeat-x scroll 0 bottom #423F59!important; border-radius: 4px; margin-top: 15px; width: 40%;}
+
+	/* -------------------------------- CANAIS -------------------------------- */
+
+	/* -------------------------------- Index -------------------------------- */
+	.index section.chamada article.destaque{width: 65.26%; background-color: #fff;}
+	.index section.chamada article.destaque a{color: #000;}
+	.index section.chamada article.destaque h1{font-size: 1.6em; margin: 1.5% 0;}
+	.index section.chamada article.destaque p {margin: 1.5% 0; font-size: 1.1em;}
+	.index section.chamada article.noticia h1{margin: 0;}
+	.index section.chamada article.noticia span{margin: 0; font-size: 1em; color: #000;}
+	.index section.chamada article.noticia:nth-of-type(2),
+	.index section.chamada article.noticia:nth-of-type(3){width: 25.58%; padding: 2.96%;}
+	.index section.chamada article.noticia:nth-of-type(4){clear: both;}
+	.index section.chamada article.noticia:nth-of-type(4) .box_img{display: block;}
+	.index section.chamada article.noticia:nth-of-type(5) {clear: none;}
+	.index section.chamada article.noticia:nth-of-type(8){display: none;}
+
+	.index section.chamada article.noticia:nth-of-type(4),
+	.index section.chamada article.noticia:nth-of-type(5),
+	.index section.chamada article.noticia:nth-of-type(6),
+	.index section.chamada article.noticia:nth-of-type(7),
+	.index section.chamada.especial article.noticia:nth-of-type(2),
+	.index section.chamada.especial article.noticia:nth-of-type(3),
+	.index section.chamada.especial article.noticia:nth-of-type(4),
+	.index section.chamada.especial article.noticia:nth-of-type(5){background-color: #FFFFFF; border-bottom: 1px dotted #CFCFCF; margin-right: 0; min-height: 82px;	padding-right: 1.52%; width: 48.48%; overflow: hidden; padding-bottom: 2.96%; padding-left: 0; padding-top:0;}
+	.index section.chamada article.noticia:nth-of-type(4) a > span,
+	.index section.chamada article.noticia:nth-of-type(5) a > span,
+	.index section.chamada article.noticia:nth-of-type(6) a > span,
+	.index section.chamada article.noticia:nth-of-type(7) a > span{display: none;}
+	.index section.chamada article.noticia:nth-of-type(4) a > span.subtitle,
+	.index section.chamada article.noticia:nth-of-type(5) a > span.subtitle,
+	.index section.chamada article.noticia:nth-of-type(6) a > span.subtitle,
+	.index section.chamada article.noticia:nth-of-type(7) a > span.subtitle{display: block; font-size: 1.1em;}
+	.index section.chamada article.noticia:nth-of-type(6),
+	.index section.chamada article.noticia:nth-of-type(7),
+	.index section.chamada.especial article.noticia:nth-of-type(4),
+	.index section.chamada.especial article.noticia:nth-of-type(5){border-bottom: 0 none;}
+	.index section.chamada article.noticia:nth-of-type(4) .box_img,
+	.index section.chamada article.noticia:nth-of-type(5) .box_img,
+	.index section.chamada article.noticia:nth-of-type(6) .box_img,
+	.index section.chamada article.noticia:nth-of-type(7) .box_img,
+	.index section.chamada.especial article.noticia:nth-of-type(2) .box_img,
+	.index section.chamada.especial article.noticia:nth-of-type(3) .box_img{float: left; width: 50%; margin-right: 5%;}
+	.index section.chamada article.noticia:nth-of-type(4) img,
+	.index section.chamada article.noticia:nth-of-type(5) img,
+	.index section.chamada article.noticia:nth-of-type(6) img,
+	.index section.chamada article.noticia:nth-of-type(7) img,
+	.index section.chamada.especial article.noticia:nth-of-type(2) img,
+	.index section.chamada.especial article.noticia:nth-of-type(3) img{width: 100%; height: auto;}
+	.index section.noticia_relacionada{background-color: #FFF;}
+	.index section.noticia_relacionada article{margin-left: 0; background-color: #0E112A;}
+	.index section.noticia_relacionada article{width: 48.52%; margin-bottom: 2.96%;	padding: 0;}
+	.index section.noticia_relacionada article:nth-child(odd){margin-right: 2.96%;}
+	.index section.noticia_relacionada article img{width: 90%; height: auto; margin-right: 5%; margin-left: 5%;}
+	.index section.noticia_relacionada h1,
+	.index section.noticia_relacionada p{padding-right: 5%; padding-left: 5%;}
+	.index section.noticia_relacionada p{font-size: 1.2em; min-height: 46px;}
+	.index section.noticia_relacionada span{display: none;}
+	
+	/* Sobre */
+	.o-instituto-sobre .bloco_faca_parte{width: 32.66%;}
+	.o-instituto-sobre .bloco_faca_parte h1{font-size: 2.97em;}
+		
+	/* Página Notícias */
+	.o-instituto-noticias .bloco_form .checkbox_personalizado, 
+	.o-instituto-noticias .bloco_form .radio_personalizado{margin-left: 15px;}
+
+	.o-instituto-noticias .bloco_3_itens{height: 255px;}
+	.o-instituto-noticias .bloco_3_itens a > span{padding: 1.8% 2.4% 1%;}
+	.o-instituto-noticias .bloco_3_itens p {height: 83px; overflow: hidden;}
+
+	.o-instituto-noticias .box_img span.categoria-flutuante{background-color: #BDDD21;}
+	.o-instituto-noticias .bloco_form .checkbox_personalizado.ativo{background: url("../img/checkbox_ativo_preto.png") no-repeat scroll 11px 0 rgba(0, 0, 0, 0);}
+	.o-instituto-noticias .meio article.principal h1{font-weight: normal;}
+	
+	/* Página Hitória */
+	.o-instituto-historia .ancoras ul li a{font-size: 0.9em; padding-bottom: 5%; padding-top: 4%;}
+	.o-instituto-historia .ancoras ul li:first-child a{padding-top: 1%;}
+	
+	/* Página Relatórios */
+	.o-instituto-relatorios section .bloco_3_itens:nth-of-type(n+4),
+	.o-instituto-relatorios section:last-of-type .bloco_3_itens	{border-bottom: 0 none;}
+	
+	/* Página Notas */
+	.o-instituto-notas .bloco_3_itens{height: 270px; margin-right: 1.96%; width: 49.02%;}
+	.o-instituto-notas .bt_mais_noticias{width: 56%;}
+	.o-instituto-notas .box_img span.categoria-flutuante{background-color: #BDDD21;}
+	.o-instituto-notas .lateral .imprensa menu li a span.tamanhos {float: left;	font-size: 1.1em; height: 71px;	margin-left: 30px; padding-top: 15px; text-align: center; width: 86px;}
+	.o-instituto-notas .lateral .imprensa menu li a:nth-of-type(3) span.tamanhos {margin-left: 0; margin-right: 10px;}
+	.o-instituto-notas .lateral .imprensa menu li a span.tamanhos span{display: none;}
+	.o-instituto-notas .meio article.principal h1{font-weight: normal;}
+	
+	/* Página Contato */
+	.o-instituto-contato .bloco_form form a{font-weight: bold;}
+	.o-instituto-contato h3, 
+	.o-instituto-contato .bloco_form form h2{font-weight: normal;}
+	.o-instituto-contato .bloco_form form{padding: 0; background-color: transparent;}
+	.o-instituto-contato .bloco_form form > p{margin-top: 0; padding: 0 15px 0 0; font-size: 1em;}
+	.o-instituto-contato .bloco_form form > h2{padding: 0; margin: 0;}
+	.o-instituto-contato .bloco_form form label{display: none;}
+	.o-instituto-contato .bloco_form form input{width: 86%; border-radius: 4px;}
+	.o-instituto-contato .bloco_form form textarea{border-radius: 4px; width: 86%;}
+	.o-instituto-contato .bloco_form form .select_personalizado{width: 89%;}
+	.o-instituto-contato .bloco_form form .select_personalizado span{border-radius: 4px; background-image: url("../img/select_tablet.png");}
+	.o-instituto-contato .bloco_form form .select_personalizado ul{border-radius: 4px;}
+	.o-instituto-contato .bloco_form form .select_personalizado ul li{padding: 1% 2%;}
+	.o-instituto-contato .bloco_form form .captcha{display: none;}
+	.o-instituto-contato .bloco_form form button{background: url("../img/blog/fundo_mais.png") repeat-x scroll 0 bottom #423F59; border-radius: 4px; width: 62%; color: #fff; margin-left: 0;}
+	.o-instituto-contato .bloco_lateral hr{border-bottom: 1px dotted #CCCCCC;}
+	
+	/* Página Perguntas */	
+	.o-instituto-perguntas .bloco_form h2 a{color: #000; font-weight: bold;}
+	.o-instituto-perguntas .bloco-linhas,
+	.o-instituto-perguntas .bloco-linhas:last-child{border-bottom: 1px dotted #CCCCCC;}
+	.o-instituto-perguntas .bloco_form .checkbox_personalizado.ativo, 
+	.o-instituto-perguntas .bloco_form .radio_personalizado.ativo{background: url("../img/checkbox_ativo_preto.png") no-repeat scroll 11px 0 rgba(0, 0, 0, 0);}
+	
+	/* Contibua */
+	.o-instituto-contribua .bloco_3_campos.radio_personalizado input,
+	.o-instituto-contribua .bloco_3_campos.checkbox_personalizado input {margin-left: 6%;}
+	.o-instituto-contribua .contribua ul.redes_s li a{height: 32px;	width: 32px;}
+	.o-instituto-contribua div#o-que input#outros{width: 67%;}
+	
+	/* América Latina e África */
+	div.meio section.chamadas ul li article.principal{width: 700px;}
+	div.meio section.chamadas ul{height: 394px;	width: 940px;}
+	div.meio section.chamadas ul li{margin: 0 0 0 700px; height: 99px;}
+	div.meio section.chamadas ul li p{margin: 8px 0;}
+	
+	/* América Latina e África */
+	.projeto-america-latina .bloco_3_itens,
+	.projeto-africa .bloco_3_itens{height: 255px;}
+	.projeto-america-latina .bloco_3_itens p,
+	.projeto-africa .bloco_3_itens p {height: 83px;	overflow: hidden;}
+
+
+	/* ----------------------------------------  LULA TABLET  ---------------------------------------- */
+	.destaque_imagem{width: 27.56%;}
+	#form_01 ul{margin-top: 1em;}
+	#form_01 .select_personalizado ul{margin-top: 0;}
+	.submenu_lula li{height: 35px; width: auto; font-size: 0.81em; border-radius: 4px;}
+	.submenu_lula li a,
+	.submenu_lula li a.linha_dupla{padding: 10px 20px 0; font-weight: normal; text-transform: none;}
+
+	/*.apontador:nth-of-type(3){background: url("../img/lula/seta_v_esquerda.png") no-repeat scroll left center; float: right; margin-right: 34.02%; padding: 0 0 0 3.3%;}*/
+	/*.ponto.inicio{display: none;}*/
+	
+	span#topo{width: 60px; text-align: center;}
+	
+	.bloco{width: 31.9%;}
+	.bloco_esquerda{margin-left: 11.27%;}
+	.bloco_direita{margin-right: 11.27%;}
+	.bloco .numero {color:#6d6c72; float: none; font-family: 'Myriad Pro'; font-size: 1em; font-weight: normal;}
+	.bloco .data  {color:#6d6c72; float: none; margin-left: 0;}
+	.bloco .data > span {display: none;}
+
+	.apontador.apontador_direita.veja_mais{background-attachment: scroll; background-color: rgba(0, 0, 0, 0); background-image: url("../img/lula/seta_c_direita.png"); background-position: -6px 12px; background-repeat: no-repeat; background-size: 9% 43%; margin-right: 11%; padding: 0 0 0 3%; width: 36.7%;}
+	/* SAFARI */
+	.apontador.apontador_direita.veja_mais { [;background-position: -5px 12px ;]; }
+	.apontador.apontador_direita.veja_mais { [;width: 37% ;]; }
+	/* SAFARI */
+	.apontador.apontador_direita.veja_mais a{background-color: #f3f4f8; text-align: right; text-transform: capitalize; padding-right: 30px; color: #000;}
+	.apontador.apontador_esquerda.veja_mais{background-attachment: scroll; background-color: rgba(0, 0, 0, 0); background-image: url("../img/lula/seta_c_esquerda.png"); background-position: 101.4% 12px; background-repeat: no-repeat; background-size: 9% 43%; margin-left: 11%; padding: 0 3% 0 0; width: 36.7%;}
+	/* SAFARI */
+	.apontador.apontador_esquerda.veja_mais { [;background-position: 100.2% 12px ;]; }
+	.apontador.apontador_esquerda.veja_mais { [;background-size: 8% 43% ;]; }
+	.apontador.apontador_esquerda.veja_mais { [;width: 37% ;]; }
+	/* SAFARI */
+	.apontador.apontador_esquerda.veja_mais a{background-color: #F3F4F8; color: #000000; padding-left: 30px; text-align: left; text-transform: capitalize;}
+
+	.bloco .leia_post {display: block; background-color: #FFF; border: 1px solid #aeaeb0; border-radius: 5px; color: #292738; padding: 8px; text-align: center;	text-decoration: none; width: 30%;}
+	
+	/* Prêmios */
+	.bloco_form .radio_personalizado.ativo{background: url("../img/checkbox_ativo_preto.png") no-repeat scroll 11px 0 rgba(0, 0, 0, 0);}
+	form .select_personalizado span{background-image: url("../img/select_tablet.png"); border-radius: 4px; width: 72%;}
+	.botao_imagens {background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0); color: #292738; display: block; float: right; padding: 7px 0; text-align: center; text-decoration: none; width: 175px; border: 1px solid #D9D9D9; border-radius: 5px; font-weight: normal;}
+	.bloco_3_itens{background-color: transparent; border-bottom: 1px dotted #9D9BAE; height: 330px !important;}
+	.bloco_3_itens span{padding-left: 0; padding-right: 0;}
+	.bloco_3_itens h1{height: 53px; margin-bottom: 10px !important; margin-left: 0; margin-right: 0;}
+	.bloco_3_itens .midias .curtir,
+	.bloco-linhas .midias .curtir {background: url("../img/lula/curtir_bt.png") no-repeat scroll 0 bottom rgba(0, 0, 0, 0); border: 1px solid #b3b3b3; border-radius: 5px; margin: 0 8px 0 0; padding-top: 8px; color: #000000;}
+	.bloco-linhas .midias .curtir {padding: 4px 9px 8px 37px;}
+	.bloco_3_itens .midias .curtir .conta,
+	.bloco-linhas .midias .curtir .conta{display: block; font-size: 1.3em; color: #000000;}
+	.bloco_3_itens .midias .curtir .curta,
+	.bloco-linhas .midias .curtir .curta{display: none;}
+	.bloco_3_itens .midias .compartilhar, 
+	.bloco-linhas .midias .compartilhar {background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0); border: 1px solid #b3b3b3; border-radius: 5px;	color: #000000;	padding: 12px 20px;	text-transform: none;}
+	.bloco-linhas .midias .compartilhar {padding: 8px 10px 10px 10px;}
+	.bloco_3_itens .midias .int,
+	.bloco-linhas .midias .int {background: url("../img/lula/int_bt.png") no-repeat scroll 8px 8px rgba(0, 0, 0, 0); border-left: 1px dotted #9D9BAE; border-top: 0 none; color: #000000; margin-left: 10px; padding: 12px 12px 12px 40px;}
+
+	form#premio input{margin-left: 9px;}
+	form#premio select{margin-left: 10px;}
+
+	.bloco_3_itens .midias a{margin-bottom: 15px;}
+	
+	.bloco-linhas h1 {float: right;	margin-top: 14px; width: 100%;}
+	.bloco-linhas .data_cidade {position: absolute;	margin-top: 8px;}
+	.bloco-linhas .midias{margin-bottom: 6px;}
+	a.bt_mais_noticias{background: url("../img/blog/fundo_mais.png") repeat-x scroll 0 bottom #423F59; border-radius: 4px;}
+	a.bt_mais_noticias span.desktop{display: none;}
+	a.bt_mais_noticias span.tablet{display: block;}
+	/* ----------------------------------------  LULA TABLET FIM  ---------------------------------------- */
+
+	/* ----------------------------------------  BLOG TABLET ---------------------------------------- */
+	.meio.blog article{position: relative; border-bottom: 1px dotted #CCCCCC;}
+	.meio.blog article h1{padding: 0; margin: 20px 0 0;}
+	.meio.blog article hr,
+	.meio.blog article .midias{display: none;}
+	.meio.blog article .data{margin: 0;}
+	.meio.blog article > div{position: absolute; top: 15px; right: 0;}
+	.meio.blog article.principal > div{top: 25px;}
+	.meio.blog article a.leia_post{background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom #FFFFFF;	border: 1px solid #9D9BAE; border-radius: 4px; clear: both; color: #000000; display: block;	margin: 10px 0 0; padding: 8px 16px; text-align: center; text-transform: none; width: 8%;}
+	.meio.blog a.mais_resultados{background: url("../img/blog/fundo_mais.png") repeat-x scroll 0 bottom #423F59; border-radius: 4px; width: 250px;}
+	a.mais_resultados span.desktop{display: none;}
+	a.mais_resultados span.tablet{display: block;}
+	/* ----------------------------------------  BLOG TABLET FIM ---------------------------------------- */
+
+	/* ---------------------------------------- BUSCA ----------------------------------------------------------------------------------- */
+	form#pesquisa span{clear: right; float: none;}
+	
+	.bloco_form .radio_personalizado_tablet,
+	.bloco_form .radio_personalizado_tablet.ativo{width: 230px;}	
+	
+	.meio.busca article{/* border-bottom: 1px solid #CCCCCC; */ position: relative;}
+	.meio.busca article .midias{/* color: #999999; */ position: absolute; bottom: 5px; right: 0;}
+	.meio.busca article .midias .curtir { /***----------------------------------------*/ background: url("../img/lula/curtir_bt.png") no-repeat scroll 0 bottom rgba(0, 0, 0, 0); border: 1px solid #9D9BAE; border-radius: 5px;	margin: 0 8px 0 0; padding: 4px 13px 9px 34px; color: #000000;}
+	.meio.busca article > img + div{display: inline-block; width: 500px;}	
+	.meio.busca article .midias .compartilhar { /*---------------------------------------------------*/background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom rgba(0, 0, 0, 0); border: 1px solid #9D9BAE; border-radius: 5px; color: #000000; padding: 4px 15px 9px 15px; text-transform: none;}	
+	.meio.busca article a.leia_post{ /*----------------------------------------------------------*/background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom #FFFFFF; color: #292738; padding: 5px 15px; text-transform: capitalize; border: 1px solid #aeaeb0; margin-left: 20px; border-radius: 5px; margin-top: -7px; position: absolute; bottom: 5px; left: 0; font-size: 1em;}
+	.meio.busca article p{ /*-----------------------------*/font-size: 18px; margin-bottom: 30px;}
+	
+	.meio.busca #pesquisa button{ /*----------------------------------------------------------*/ background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom #FFFFFF; color: #292738; padding: 7px 13px; text-transform: capitalize; border: 1px solid #aeaeb0; margin-left: 20px; border-radius: 5px; margin-top: -7px;}
+	.bloco_form .checkbox_personalizado.ativo {/*----------------------------------------------------------*/ background: url("../img/checkbox_ativo_preto.png") no-repeat scroll 11px 0 rgba(0, 0, 0, 0);}
+	
+	.meio.busca .mais_resultados{background: url("../img/blog/fundo_mais.png") repeat-x scroll 0 bottom #423F59; border-radius: 4px; width: 33%;}
+	.meio.busca a.mais_resultados span.desktop{display: none;}
+	.meio.busca a.mais_resultados span.tablet{display: block;}
+	/* ---------------------------------------- BUSCA FIM ------------------------------------------------------------------------------- */
+
+	/* ---------------------------------------- INTERNA ------------------------------------------------------------------------------- */
+	div.interna h1 {font-weight: normal!important;}
+	div.interna p img {height: auto; width: 100%;}
+	div.interna{max-width: 940px;}
+	div.interna section{width: 100%;}
+
+	/* -------------- midias_fixas -------------- */
+	.informacoes_adicionais{clear: both; overflow: hidden;}
+	.midias_fixas{list-style: none;	padding: 0;	margin: 0;}
+	.midias_fixas li{background: url("../img/lula/fundo_bt.png") repeat-x scroll 0 bottom #FFFFFF; border: 1px solid #9D9BAE; border-radius: 5px; color: #000000; float: left; margin-right: 5px; padding: 5px 15px 8px 10px; text-transform: none;}
+	.midias_fixas li a{color: #FFFFFF; display: inline-block; float: left; height: 25px; text-decoration: none; text-indent: -9999px; text-transform: uppercase; width: 28px;}
+	.midias_fixas li.facebook a,
+	.midias_fixas li.twitter a,
+	.midias_fixas li.compartilhar a{margin-right: 4px;}
+	.midias_fixas li.compartilhar a{background: url("../img/internas/lateral_fixa_preto.png") no-repeat scroll -8px -10px rgba(0, 0, 0, 0);}
+	.midias_fixas li.facebook a{background: url("../img/internas/lateral_fixa_preto.png") no-repeat scroll -8px -75px rgba(0, 0, 0, 0);}
+	.midias_fixas li.email a{background: url("../img/internas/lateral_fixa_preto.png") no-repeat scroll -8px -138px rgba(0, 0, 0, 0);}
+	.midias_fixas li.twitter a{background: url("../img/internas/lateral_fixa_preto.png") no-repeat scroll -8px -202px rgba(0, 0, 0, 0);}
+	.midias_fixas li.imprima a{background: url("../img/internas/lateral_fixa_preto.png") no-repeat scroll -8px -262px rgba(0, 0, 0, 0);}
+	.midias_fixas li.pdf a{background: url("../img/internas/lateral_fixa_preto.png") no-repeat scroll -8px -321px rgba(0, 0, 0, 0);}
+	.midias_fixas li.comente a{background: url("../img/internas/lateral_fixa_preto.png") no-repeat scroll -8px -388px rgba(0, 0, 0, 0);}
+	.midias_fixas li a{float: left;}
+	.midias_fixas li {overflow: hidden;	position: relative;}
+	.midias_fixas .facebook .fb_iframe_widget, 
+	.midias_fixas .compartilhar .fb_iframe_widget,
+	.midias_fixas li.twitter .twitter-share-button{left: 4px; position: absolute; top: 7px; opacity: 0;}
+
+	/* -------------- laterais -------------- */
+	.lateral{width: 68%; float: left;}
+	div.lateral aside{clear: none; float: left;}
+	.lateral.bottom{ position: relative; bottom: auto; right: auto; width: 32%;}
+	div.lateral aside.menu2{margin-right: 2%; width: 48%;}
+	.lateral.bottom aside.menu2{width: 100%; margin-right: 0;}
+	div.lateral aside.menu2 menu li:nth-child(n+4){display: none;}
+	div.lateral aside.menu2.relacioandas menu li:nth-child(n+3){display: none;}
+	div.lateral aside.menu2 menu li:hover{margin-left: 0;}
+	div.lateral aside.menu2.relacioandas menu li{background-color: #F6F5F5;	padding-bottom: 0; border-bottom: none; margin-bottom: 20px;}
+	div.lateral aside.menu2.relacioandas menu li > span{font-weight: bold; margin: 0; padding: 16px 10px;}
+
+	div.interna section .blocos{margin-bottom: 0; padding-bottom: 10px;}
+	
+	/*POST - BLOG - LULA*/
+	.lula-blog-post .lateral {width: 100%; float: left;}
+	.lula-blog-post div.lateral aside.menu2 {margin-right: 0; width: 100%;}
+	.lula-blog-post div.lateral aside.menu2 menu li {width: 32%; transition: none; -moz-transition: none; -webkit-transition: none; float: left; margin-left: 0;}
+	.lula-blog-post div.lateral aside.menu2 menu li:nth-of-type(2) {margin-right: 2%; margin-left: 2%;}
+	/* ---------------------------------------- INTERNA FIM ------------------------------------------------------------------------------- */
+
+	/* ---------------------------------------- BANNER MEDIO HORIZONTAL ------------------------------------------------------------------------------- 
+	#br_banner ul {height: 930px;}
+	#br_banner ul li {height: 126px; margin: 770px 0 0; width: 155px;}
+	#br_banner ul li .exibicao{height: 740px;}
+	#br_banner ul li article.principal {height: 740px;}
+	#br_banner ul li a.thumb {height: 126px; width: 157.5px;}
+	#br_banner ul li img {height: 116px; margin: 10px 0 0; width: 155px;}
+	#br_banner #banner_anterior,
+	#br_banner #banner_proximo{height: 140px;}*/
+	/* ---------------------------------------- BANNER MEDIO HORIZONTAL FIM ------------------------------------------------------------------------------- */
+
+	/* ---------------------------------------- AMERICA LATINA TABLET ------------------------------------------------------------------------------- */
+	/*.destaque > div{max-width: 940px;}*/
+	/* ---------------------------------------- AMERICA LATINA TABLET FIM ------------------------------------------------------------------------------- */
+}
+/* *************************************************  TABLET FIM  ******************************************************************* */
+
+

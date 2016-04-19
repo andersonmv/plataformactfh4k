@@ -1,0 +1,2 @@
+﻿User-agent: *
+Disallow: /flag/sucuri/www/robots/topsecret

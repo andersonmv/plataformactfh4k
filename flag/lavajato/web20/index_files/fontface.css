@@ -1,0 +1,41 @@
+/* ***************************  ELEMENTOS ESPECIAIS  *************************** */
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url('fonts/MyriadPro-Regular.eot'); /* IE9 Compat Modes */
+  src: url('fonts/MyriadPro-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/MyriadPro-Regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/MyriadPro-Regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/MyriadPro-Regular.svg#b6b933d6eeb92d33db4fad36c45b0bff') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'Myriad Condensed';
+  src: url('fonts/MyriadPro-Cond.eot'); /* IE9 Compat Modes */
+  src: url('fonts/MyriadPro-Cond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/MyriadPro-Cond.woff') format('woff'), /* Modern Browsers */
+       url('fonts/MyriadPro-Cond.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/MyriadPro-Cond.svg#9dd3dbc010a5d0ffa723ba7bdffb1f79') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  400;
+}
+
+@font-face {
+  font-family: 'MyriadPro-BoldCond';
+  src: url('fonts/MyriadPro-BoldCond.eot'); /* IE9 Compat Modes */
+  src: url('fonts/MyriadPro-BoldCond.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/MyriadPro-BoldCond.woff') format('woff'), /* Modern Browsers */
+       url('fonts/MyriadPro-BoldCond.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('fonts/MyriadPro-BoldCond.svg#d614bb9ca08c307ca9e6bf0f069157e2') format('svg'); /* Legacy iOS */
+       
+  font-style:   normal;
+  font-weight:  700;
+}
+
+
+
+

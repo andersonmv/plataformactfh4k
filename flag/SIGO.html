@@ -1,0 +1,337 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>SIGO</title>
+     <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="./SIGO_files/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./SIGO_files/jquery.min.js"></script>
+    <script src="./SIGO_files/bootstrap-hover-dropdown.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./SIGO_files/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./SIGO_files/camadas.js"></script>
+    <script type="text/javascript" src="./SIGO_files/funcoes.js"></script>
+    <script type="text/javascript" src="./SIGO_files/ajax.js"></script>
+	<script type="text/javascript" src="./SIGO_files/acessodados.js"></script>
+    <script type="text/javascript" src="./SIGO_files/objfuncoes.js"></script>
+    <script type="text/javascript" src="./SIGO_files/CryptoJS.js"></script>
+    <script type="text/javascript" src="./SIGO_files/sha1.js"></script>
+    <script type="text/javascript">
+
+        function ApenasNumeros(e) {
+	        var isNS4 = ((navigator.appName=="Netscape") ? 1 : 0 );
+	        //excluir: setas, home, end, backspace, delete, tab
+	        var excluir = "'35'36'37'39'0'8'9'";
+	        if (!isNS4) {
+		        var ex = "'"+e.keyCode+"'";
+		        if (!(e.keyCode >= 48 && e.keyCode <= 57) && excluir.indexOf(ex)<0)
+			        e.returnValue = false;
+	        } else {
+		        var ex = "'"+e.which+"'";
+		        if ( !(e.which >= 48 && e.which <= 57) && excluir.indexOf(ex)<0)
+			        e.preventDefault();
+	        }
+
+        }
+
+        function onEnterPress(e) {
+	        var isNS4 = ((navigator.appName=="Netscape") ? 1 : 0 );
+	        if (!isNS4) {
+		        if (e.keyCode == 13) {
+			        e.returnValue = false;
+			        if (document.getElementById('unidade')) {
+				        document.getElementById('unidade').focus();
+			        } else if (document.getElementById('b_entrar')) {
+				        document.getElementById('b_entrar').focus();
+			        }
+		        }
+	        } else {
+		        if ( (e.which == 13 )) {
+			        e.preventDefault();
+			        if (document.getElementById('unidade')) {
+				        document.getElementById('unidade').focus();
+			        } else if (document.getElementById('b_entrar')) {
+				        document.getElementById('b_entrar').focus();
+			        }
+		        }
+	        }
+        }
+
+        function valida() {
+	        f = document.form1;
+	        if (f.CPF.value=="") {
+		        alert("Digite seu CPF!");
+		        return false;
+	        }
+	        if (f.Senha.value=="") {
+		        alert("Digite sua Senha!");
+		        return false;
+	        }
+	        return true;
+        }
+
+        function Entrar() {
+
+            var form = document.form1;
+
+            if (document.getElementById('Senha2').value != '') {
+                document.getElementById('Senha2').value = CryptoJS.SHA1(document.getElementById('Senha2').value);
+            }
+	        
+	        if (form.idUni.value == "") {
+		        alert("Por favor escolha uma unidade!");
+                form.unidade.focus();
+	        }
+	        else {
+		        if (!isNaN(form.CPF.value)) {
+			        form.submit();
+		        }
+		        else {
+			        alert('- CPF inválido!');
+			        form.CPF.focus();
+			        form.CPF.select();
+		        }
+	        }
+            objid('bloqueador').style.visibility='hidden';
+        }
+
+        function FindCpf(cpf) {
+	        if (cpf != '') {
+		        ajax              = new Init_Ajax();
+		        ajax.SetMethod    = "POST";
+		        ajax.objFieldName = Array("cpf");
+		        ajax.objValue     = Array(cpf);
+		        ajax.SetUri       = "acesso.pesquisa.php";
+		        ajax.ExecuteObj("div_unidade");
+		        delete ajax;
+	        }
+        }
+
+        function buscaUnidade(e, obj) {
+	        var isNS4 = ((navigator.appName=="Netscape") ? 1 : 0 );
+	        var enter = false;
+	        var txt   = obj.value;
+	        var r, tipo;
+            var cpf = document.getElementById('CPF').value;
+	        tipo = "COORD";
+
+	        if (!isNS4) {
+		        if (e.keyCode == 13) {
+			        e.returnValue = false;
+			        enter =true;
+		        }
+	        } else {
+		        if ( (e.which == 13 )) {
+			        e.preventDefault();
+			        enter = true;
+		        }
+	        }
+
+	        if (enter) {
+	           objid('bloqueador').style.visibility='visible';
+		        if (txt != "" && cpf != '') {
+			        r = "id_coord=>idUni,nm_coord=>unidade";
+			        tp=objid('tp_admin').value;
+
+			        document.getElementById('generico').style.visibility='visible';
+			        document.getElementById('popup').src = 'acesso_busca_unidade.php?tipo='+tipo+'&retorno='+r+'&txt='+txt+'&execute=limpaPopup&tpa='+tp+'&cpf='+cpf;
+		        } else {
+			        alert("É necessário informar algum caracteres para realizar a busca.");
+			        obj.focus();
+
+		        }
+                objid('bloqueador').style.visibility='hidden';
+	        }
+        }
+
+        function limpaPopup() {
+	        document.getElementById('generico').style.visibility='hidden';
+        }
+
+    </script>
+    <script type="text/javascript">AC_FL_RunContent = 0;</script>
+    <script type="text/javascript" src="./SIGO_files/AC_RunActiveContent.js"></script>
+    <style type="text/css">
+        *{
+	        font-family:Arial, Helvetica, sans-serif;
+	        padding:0;
+	        margin:0;
+        }
+        .form_acesso{
+	        background:#FFFFFF;
+	        border: 1px #999999 solid;
+        }
+        .form_acesso_lupa{
+	        background:#FFFFFF;
+	        FONT-SIZE:10px;
+	        COLOR:#000000;
+	        text-transform:uppercase;
+	        font-weight:normal;
+	        border:1px solid #cccccc;
+	        padding-left:18px;
+	        background-image:url(img/ico_formBusca.gif);
+	        background-repeat:no-repeat;
+        }
+        .acesso_vermelho{
+	        font-size:12px;
+	        color:#FF0000;
+	        font-weight:bold;
+        }
+        .acesso_branco_titulo{
+	        font-size:12px;
+	        color:#C8A245;
+	        font-weight:bold;
+        }
+        .acesso_branco{
+	        font-size:12px;
+	        color:#FFFFFF;
+        }
+        .bt_acesso{
+	        background: url(img/bt_acesso.gif) no-repeat;
+	        width:77px;
+	        height:18px;
+	        border:none;
+	        color:#9D7E13;
+	        font-weight:bolder;
+	        font-size:11px;
+        }
+        #div_processando {
+	        position:absolute;
+	        left:513px;
+	        top:349px;
+	        width:209px;
+	        height:22px;
+	        z-index:99992;
+	        visibility: hidden;
+        }        
+        .style1 {
+	        color: #00FF00
+        }
+    </style>
+</head>
+<body onload="document.getElementById(&#39;bloqueador&#39;).style.visibility=&#39;hidden&#39;;" onkeydown="//javascript:block()" oncontextmenu="//return false" style="background:#141414;">
+	<div style="position:absolute; left: 50%; margin-left: -110px; bottom:68px; height: 52px;"><img src="./SIGO_files/logomarcagoverno.gif"></div>
+	<div style="position:absolute; bottom:5px; left: 50%; margin-left: -135px;">
+		<script type="text/javascript">
+			if (AC_FL_RunContent == 0) {
+				alert("This page requires AC_RunActiveContent.js.");
+			} else {
+				AC_FL_RunContent(
+					'codebase', 'http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0',
+					'width', '270',
+					'height', '50',
+					'src', 'logo_rodape_peq',
+					'quality', 'high',
+					'pluginspage', 'http://www.macromedia.com/go/getflashplayer',
+					'align', 'middle',
+					'play', 'true',
+					'loop', 'true',
+					'scale', 'showall',
+					'wmode', 'transparent',
+					'devicefont', 'false',
+					'id', 'logo_rodape_peq',
+					'bgcolor', '#ffffff',
+					'name', 'logo_rodape_peq',
+					'menu', 'true',
+					'allowFullScreen', 'false',
+					'allowScriptAccess','sameDomain',
+					'movie', 'logo_rodape_peq',
+					'salign', ''
+				); //end AC code
+			}
+		</script><embed width="270" height="50" src="logo_rodape_peq.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" align="middle" play="true" loop="true" scale="showall" wmode="transparent" devicefont="false" bgcolor="#ffffff" name="logo_rodape_peq" menu="true" allowfullscreen="false" allowscriptaccess="sameDomain" salign="" type="application/x-shockwave-flash"> 
+		<noscript>
+			&lt;object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,0,0" width="270" height="50" id="logo_rodape_peq" align="middle"&gt;
+				&lt;param name="allowScriptAccess" value="sameDomain" /&gt;
+				&lt;param name="allowFullScreen" value="false" /&gt;
+				&lt;param name="movie" value="logo_rodape_peq.swf" /&gt;
+                &lt;param name="quality" value="high" /&gt;
+                &lt;param name="wmode" value="transparent" /&gt;
+                &lt;param name="bgcolor" value="#ffffff" /&gt;
+                &lt;embed
+                    src="logo_rodape_peq.swf"
+                    quality="high"
+                    wmode="transparent"
+                    bgcolor="#ffffff"
+                    width="270"
+                    height="50"
+                    name="logo_rodape_peq"
+                    align="middle"
+                    allowScriptAccess="sameDomain"
+                    allowFullScreen="false"
+                    type="application/x-shockwave-flash"
+                    pluginspage="http://www.macromedia.com/go/getflashplayer"/&gt;
+			&lt;/object&gt;
+		</noscript>
+	</div>
+	<div id="div_processando">
+		<table width="100" border="0" cellspacing="0" cellpadding="0">
+			<tbody><tr>
+				<td align="center" valign="middle"><img src="./SIGO_files/spinner.gif" width="16" height="16"></td>
+				<td align="center" valign="middle"><div style="color:#666666;font-size:11px;font-weight:bold">Carregando...</div></td>
+			</tr>
+		</tbody></table>
+	</div>
+	<form method="post" action="#" name="form1" id="form1" enctype="multipart/form-data">
+		<div id="carregando"></div>
+		<div style="position:absolute;left: 50%;margin-left: -307px;top:45%;margin-top:-180px">
+			<table width="614" height="359" border="0" cellpadding="0" cellspacing="0">
+				<tbody><tr>
+					<td width="50%" height="359" align="center" valign="middle">
+						<img src="./SIGO_files/logosigo.png" border="none">
+					</td>
+					<td width="50%" align="right" valign="top">
+						<table width="100%" border="0" cellspacing="0" cellpadding="0">
+							<tbody><tr>
+								<td width="90%" style="margin-bottom:5px"><img src="./SIGO_files/texto_acesso2.gif" width="300" height="80"></td>
+							</tr>
+							<tr>
+								<td align="center">
+									<table width="98%" border="0" cellspacing="0" cellpadding="0" style="margin-top:40px">
+										<tbody><tr>
+											<td align="center" valign="middle">
+												<table width="100%" border="0" align="right" cellpadding="0" cellspacing="2" class="tb">
+													<tbody><tr>
+														<td width="217" align="left" valign="bottom">
+															<span class="acesso_branco_titulo">CPF</span>
+														</td>
+														<td width="78" align="left" valign="bottom">
+															<span class="acesso_branco_titulo">Senha</span>
+															<input name="limpar" type="hidden" id="limpar" value="0">
+														</td>
+													</tr>
+													<tr>
+														<td align="left">
+															<input name="CPF" value="" type="text" onfocus="objid(&#39;div_unidade&#39;).innerHTML = &#39; &#39;;" class="form_acesso" id="CPF" size="20" maxlength="11" onkeypress="ApenasNumeros(event)" onblur="FindCpf(this.value)">
+														</td>
+														<td align="right" valign="top">
+															<input name="Senha" type="password" value="" class="form_acesso" id="Senha2" onkeypress="onEnterPress(event);" size="10">
+														</td>
+													</tr>
+												</tbody></table>
+											</td>
+										</tr>
+										<tr>
+											<td><div style="margin-top:15px" id="div_unidade">&nbsp;</div></td>
+										</tr>
+									</tbody></table>
+								</td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+			</tbody></table>
+		</div>
+		<div id="generico" style="z-index:3; position:absolute; width:100%; height:100%; visibility: hidden;">
+			<iframe scrolling="no" frameborder="0" width="100%" height="100%" style="z-index:0;opacity:.7;filter:alpha(opacity=70);" src="./SIGO_files/saved_resource.html"></iframe>
+			<iframe id="popup" scrolling="no" frameborder="0" style="border:1px solid;position:absolute;top:50%;left:50%;width:500px;height:350px;margin-left:-250px;margin-top:-175px;" src="./SIGO_files/saved_resource.html"></iframe>
+		</div>
+		<div id="bloqueador" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index: 99991; ; visibility: hidden;visibility: hidden;">
+			<iframe id="frm_bloqueador" frameborder="0" style="top:0;left:0;width:100%;height:100%;z-index:999999;filter:Alpha(Opacity=70)" src="./SIGO_files/saved_resource.html"></iframe>
+		</div>
+        	</form>
+    <script>document.getElementById('CPF').focus();</script>    <!-- Piwik -->
+    <!-- End Piwik Tracking Code -->
+    
+</body></html>

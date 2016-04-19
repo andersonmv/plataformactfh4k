@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.tn3-gallery {    
+	height: 680px;    
+	line-height: normal;    
+	position: relative;    
+	width: 100%;
+}
+.tn3-gallery img {    
+	margin: 0 !important;    
+	padding: 0 !important;    
+	border: 0 !important;    
+	max-width: none !important;
+}    
+.tn3-image {    position: absolute;    height: 620px;    width: 100%;}
+.tn3-full-image{	top: 0!important;}
+.tn3-controls-bg {    position: absolute;    width: 100%;    height: 110px;    bottom: 0px;    background-color: #1c1a2b;}
+.tn3-thumbs ul, .tn3-thumbs li {    margin: 0 !important;    padding: 0 !important;    list-style-type: none !important;}
+.tn3-thumbs li{	margin-right: 20px!important;}
+.tn3-thumbs {    position: absolute;    width: 980px!important;    height: 95px;    bottom: 0px;    left: 17px;    padding: 0;}.tn3-thumbs > div {	overflow: visible!important;	margin-left: 6px;}
+.tn3-thumb {    height: 81px;    width: auto;    margin-right: 15px;    cursor: pointer;	}
+.tn3-thumb img {    height: 81px;    width: auto;}    
+.tn3-thumb-over {    border-top: 6px solid #f2c13f;	position: relative;	top: -6px;	}
+.tn3-thumb-selected {	cursor: default;	border-top: 6px solid #f2c13f;	position: relative;	top: -6px;}
+.tn3-next {    position: absolute;    background: url("setas.png") repeat scroll 51px 0 rgba(0, 0, 0, 0);    width: 51px;    height: 121px;    right: 0;    cursor: pointer;}.tn3-prev {    background: url("setas.png") repeat scroll 0 0 rgba(0, 0, 0, 0);    cursor: pointer;    height: 121px;    left: 0;    position: absolute;    width: 51px;}.tn3-next-page {    background: url("marcador.png") no-repeat center center #1C1A2B;    bottom: 0;    cursor: pointer;    height: 110px;    right: 0;    position: absolute;    width: 25px;}.tn3-next-page:hover {    }.tn3-prev-page {    background: url("marcador_anterior.png") no-repeat center center #1C1A2B;    bottom: 0;    cursor: pointer;    height: 110px;    left: 0;    position: absolute;    width: 25px;}.tn3-prev-page:hover {    }.tn3-preloader {    position: absolute;    width: 39px;    height: 15px;}.tn3-text-bg {	background-image: url("bg.png");    position: absolute;    bottom: 60px;    width: auto;    font-size: medium;}.tn3-image-title {    font-family: Tahoma, Helvetica, sans-serif;    color: #e0dcdc;    font-size: 0.6875em;    font-weight: bold;    padding: 1.1em 0 0 1.1em;}.tn3-image-description {    font-family: Tahoma, Helvetica, sans-serif;    color: #e0dcdc;    font-size: 0.625em;    line-height: 1.1em;    padding-left: 1.1em;}.tn3-image-description a{	color: #FFFFFF;	text-decoration: none;	padding: 15px;	display: block;	font-size:16px;}.tn3-timer {    position:absolute;    width: 100%;    height: 2px;    bottom: 0px;    background: url('bg.png') repeat;    background: rgba(0, 0, 0, 0.3);}.tn3-count {    position:absolute;    right:20px;    bottom:6px;    color:#777777;    font-family:Arial, Helvetica, sans-serif;    font-size:12px;    display: none;}.tn3-play {    position: absolute;    background-image: url('tn3.png');    background-position: -74px -5px;    left: 13px;    bottom: 9px;    width: 25px;    height: 25px;    cursor: pointer;	display: none;}.tn3-play:hover {    background-position: -74px -42px;}.tn3-play-active {    background-position: -101px -4px;}.tn3-play-active:hover {    background-position: -101px -41px;}.tn3-show-albums {    position: absolute;    background-image: url('tn3.png');    background-position: -177px -6px;    bottom: 9px;    right: 59px;    width: 25px;    height: 25px;    cursor: pointer;}.tn3-show-albums:hover {    background-position: -177px -41px;}.tn3-fullscreen {    background: url("full.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);    cursor: pointer;    height: 51px;    position: absolute;    right: 0;    top: 0;    width: 51px;}.tn3-albums {    position: absolute;    width: 620px;    height: 425px;    left: 0px;    top: 0px;    color: #e0dcdc;    font-family: Tahoma, Helvetica, sans-serif;    background-image:url('bg.png');    background: rgba(0, 0, 0, 0.7);}.tn3-inalbums {    position: absolute;    width: 620px;    height: 380px;    padding: 14px;    top: 45px;}.tn3-album {    position:absolute;    width: 280px;    height: 70px;    background-color: #1a1a1a;    overflow: hidden;    cursor: pointer;}.tn3-album-over {    background-color: #2a2a2a;}.tn3-album-selected {    background-color: #cdcdcd;    color: #111214;    cursor: default;}.tn3-album-image {    height: 100%;    width: 80px;    margin-right: 10px;    float: left;}.tn3-album-image img {    width: 80px;    height: 80px;}.tn3-album-title {    font-size:11px;    font-weight:bold;    margin-top: 1em;}.tn3-album-description {    font-size:10px;    height: 3em;    line-height: 1.4em;    overflow: hidden;}.tn3-albums-next {    position:absolute;    background-image:url('tn3.png');    background-position: -43px -9px;    width: 20px;    height: 20px;    right:24px;    top:20px;    cursor:pointer;}.tn3-albums-next:hover {    background-position: -43px -46px;}.tn3-albums-prev {    position:absolute;    background-image:url('tn3.png');    background-position: -9px -9px;    width: 20px;    height: 20px;    right: 46px;    top: 20px;    cursor: pointer;}.tn3-albums-prev:hover {    background-position: -9px -46px;}.tn3-albums-close {    position: absolute;    background-image: url('tn3.png');    background-position: -237px -9px;    width: 20px;    height: 20px;    left: 20px;    top: 19px;    cursor: pointer;}.tn3-albums-close:hover {    background-position: -237px -47px;}.tn3-sep1 {    position: absolute;    background-image: url('tn3.png');    width: 2px;    height: 47px;    left: 47px;	display: none;}.tn3-sep2 {    position: absolute;    background-image: url('tn3.png');    width: 2px;    height: 47px;    right: 96px;	display: none;}
+.tn3-sep3 {    position: absolute;    background-image: url('tn3.png');    width: 2px;    height: 47px;    right: 47px;	display: none;}/* when javascript is disabled */
+.tn3.album, .tn3.album li {    float:left;    list-style-type: none;    margin:4px;}
+.tn3.album div, .tn3.album li h4, .tn3.album li div{    display:none;}
+
+.tn3-image-description p {
+	font-family: Tahoma, Helvetica, sans-serif;
+	font-size: 1.2em;
+	color: #ccc;
+	margin: 0 0 15px 0;
+	padding-left: 1.2em;
+}
