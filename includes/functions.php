@@ -268,7 +268,7 @@ function carregaflags( $mysqli, $tipo, $evento) {
 			echo '</div>';
 			echo '<div class="col-md-5">';
 			echo '<div class="form-group">';								
-			echo '<input type="password" class="form-control"  id="flag" name="flag">';
+			echo '<input type="input" class="form-control"  id="flag" name="flag">';
 			echo '<input type="hidden" class="form-control"  id="order" name="order" value="'.$row[0].'">';
 			echo '</div>';
 			echo '</div>';
