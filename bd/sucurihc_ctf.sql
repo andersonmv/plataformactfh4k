@@ -64,6 +64,19 @@ CREATE TABLE `score` (
   `evento` varchar(255) NOT NULL DEFAULT ''
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- -------------------------------------------------------
+
+--
+-- Estrutura da tabela `recuperacao`
+--
+
+CREATE TABLE recuperacao (
+  utilizador  VARCHAR(255) NOT NULL,
+  confirmacao VARCHAR(40) NOT NULL,
+  KEY(utilizador, confirmacao)
+)
+
+
 -- --------------------------------------------------------
 
 --
