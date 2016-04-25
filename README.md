@@ -28,8 +28,7 @@ Adicionado novas funções pelo @andersonmv
 ## Credits
 
 Team SucuriHC <br>
-@boot <br>
-@andersonmv 
+
 
 ## License
 
